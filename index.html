@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Coloring text in console</title>
+</head>
+<body>
+    <script type='text/javascript'>
+        
+        function colorLog(message, color) {
+
+            color = color || 'black';
+
+            switch (color) {
+                case 'success':  
+                     color = 'Green'; 
+                     break;
+                case 'info':     
+                        color = 'DodgerBlue';  
+                     break;
+                case 'error':   
+                     color = 'Red';     
+                     break;
+                case 'warning':  
+                     color = 'Orange';   
+                     break;
+                default: 
+                     color = color;
+            }
+
+            console.log('%c' + message, 'color:' + color);
+        }
+
+        colorLog('Hello World!');
+        colorLog('Hello World!', 'success');
+        colorLog('Hello World!', 'error');
+        colorLog('Hello World!', 'warning');
+        colorLog('Hello World!', 'info');
+
+    </script>
+</body>
+</html>
